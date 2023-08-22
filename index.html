@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Resume Builder</title>
+    
+    
+
+</head>
+<body>
+    
+    <!-- here goes html code  -->
+    <div class="caintainer">
+        <h1 class="text-center my-3">Resume Builder</h1>
+        <p class="text-center">By Using HTML,CSS and Java Script</p>
+    </div>
+
+    <!-- personal information section  -->
+    <div class="row" id="cv-form">
+        <div class="col-md-6 mt-4">
+            <!-- first col  -->
+            <h3 class="ms-5">Personal Information</h3>
+          <div class="PersonalForm">
+          <!-- first name  -->
+            <form class="row g-3 needs-validation mt-3" novalidate>
+                <div class="col-md-3 position-relative">
+                  <label for="validationTooltip01" class="form-label">First name</label>
+                  <input type="text" class="form-control" id="FirstName" value="" required>
+                </div>
+                <!-- Last name  -->
+                <div class="col-md-3 position-relative">
+                  <label for="validationTooltip02" class="form-label">Last name</label>
+                  <input type="text" class="form-control" id="LastName" value="" required>
+                </div>
+                <!-- Email addess  -->
+                <div class="col-md-5 position-relative">
+                  <label for="validationTooltipUsername" class="form-label">Email address</label>
+                  <div class="input-group has-validation">
+                    <input type="email" class="form-control" id="EmailID" aria-describedby="validationTooltipUsernamePrepend" required>
+                    <div class="invalid-tooltip">
+                      Please enter valid email address.
+                    </div>
+                  </div>
+                </div>
+                <!-- contact number  -->
+                <div class="col-md-4 position-relative">
+                  <label for="validationTooltip03" class="form-label">Contact Number</label>
+                  <input type="number" class="form-control" id="Contact" required>
+                  <div class="invalid-tooltip">
+                    Please provide a valid .contact number
+                  </div>
+                </div>
+                <!-- Address  -->
+                <div class="col-md-5 position-relative mt-3">
+                  <label for="validationTooltip03" class="form-label">Address</label>
+                  <textarea type="text" class="form-control" id="AddressID" required rows="1"></textarea>
+                  <div class="invalid-tooltip">
+                    Please provide a valid city.
+                  </div>
+                </div>
+                <!-- City  -->
+                <div class="col-md-4 mt-3 position-relative">
+                  <label for="validationTooltip03" class="form-label">City</label>
+                  <input type="text" class="form-control" id="CityID" required>
+                  <div class="invalid-tooltip">
+                    Please provide a valid city.
+                  </div>
+                </div>
+                <!-- State  -->
+                <div class="col-md-3 mt-3 position-relative">
+                  <label for="validationTooltip04" class="form-label">State</label>
+                  <select class="form-select" id="StateID" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option>MP</option>
+                  </select>
+                  <div class="invalid-tooltip">
+                    Please select a valid state.
+                  </div>
+                </div>
+                <!-- pin code  -->
+                <div class="col-md-3 mt-3 position-relative">
+                  <label for="validationTooltip05" class="form-label">Pin Code</label>
+                  <input type="text" class="form-control" id="PinCodeID" required>
+                  <div class="invalid-tooltip">
+                    Please provide a valid zip.
+                  </div>
+                </div>
+                  <!-- Date of birth  -->
+                    <div class="DOB col-md-3 mt-4">
+                    <label for="birthday">Date of birth</label><br>
+                    <input type="date" class="mt-2" id="DoBID" name="DOB">
+                    </div>
+                     <!-- Gender -->
+                         <div class="dropdown ms-3 mt-4" style="width: max-content;">
+                            <label for="gender">Gender</label><br>
+                           <select class="form-select mt-2" id="GenderID">
+                            <option selected disabled value="">Choose...</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                          </select>
+                        </div>
+                    <!-- Nationality  -->
+                        <div class="col-md-3 ms-4 mt-4 position-relative">
+                          <label for="validationTooltip05" class="form-label">Nationality</label>
+                          <input type="text" class="form-control" id="NationalityID" required>
+                        </div>
+                     <!-- image  -->
+
+                     <div class="form-group col-md-7">
+                      <label>Select your photo</label>
+                      <input type="file" class="form-control mt-3" id="imgF">
+                     </div>
+
+
+
+                <!-- importent links  -->
+                <p class="text-secondary my-4">Important Links</p>
+                <!-- links -->
+                 <!-- Linkdin Link  -->
+                      <div class="from-group">
+                      <label for="linkField">LinkedIn</label>
+                      <input type="text"
+                         id="linkField"
+                         placeholder="Enter url"
+                         class="form-control">
+                      </div>
+                <!-- Facebook link  -->
+                <div class="from-group">
+                  <label for="fbField">Facebook</label>
+                  <input type="text"
+                  id="fbField"
+                  placeholder="Enter url"
+                  class="form-control">
+                </div>
+                <!-- Github Link  -->
+                <div class="from-group">
+                  <label for="GitField">GitHub</label>
+                  <input type="text"
+                  id="GitField"
+                  placeholder="Enter url"
+                  class="form-control">
+                </div>
+              </form>
+            </div>
+        </div>
+
+        <!-- Education section  -->
+        <div class=" col-md-6 mt-4" id="educationContainer" >
+          <h3 class="row g-3 mt-1">Education</h3>
+          <div class="educationSection">
+          <form class="row g-3">
+            <!-- Education  -->
+            <div class="col-md- mt-5">
+              <label for="inputEducation" class="form-label">Education</label>
+              <input type="text" class="form-control inputEducation">
+            </div>
+             <!-- School  -->
+              <div class="col-md-6">
+                <label for="inputSU" class="form-label">School/Univercity</label>
+                <input type="text" class="form-control inputSU">
+              </div>
+            <!-- City  -->
+            <div class="col-md-6">
+              <label for="inputCity3" class="form-label">City</label>
+              <input type="text" class="form-control inputCity3">
+            </div>
+            <!-- statr date  -->
+            <div class="col-md-7">
+              <label for="inputSD" class="form-label">Start Date</label>
+              <input type="date" class="form-control inputSD" placeholder="">
+            </div>
+            <!-- End date  -->
+            <div class="col-md-7">
+              <label for="inputED" class="form-label">End Date</label>
+              <input type="date" class="form-control inputEd" placeholder="">
+            </div>
+            <!-- Discription  -->
+            <div class="from-group col-md-6 position-relative mt-3">
+              <label for="" class="mt-2"><b>Discription</b></label>
+              <textarea type="text"
+              placeholder=""
+              class="form-control DisID"
+              rows="2"
+              ></textarea>
+            </form>
+            </div>
+          </div>
+           <!-- Add button for multiple Education  -->
+             <div class="container mt-3">
+                <button class="btn btn-primary btn-sm button" id="AddEducation">Add</button>
+            </div>
+        </div>
+        
+          <!-- Profesional information -->
+        <div class=" second-row col-md-6 ">
+           <!-- second col  -->
+           <div class="PRO">
+            <h3 class="ms-4 mt-5">Profession Information</h3>
+
+            <!-- objective  -->
+            <div class="row g-3 from-group position-relative mt-3">
+              <label for="" class="mt-2"><b>Objective</b></label>
+              <textarea type="text"
+              placeholder="objective"
+              class="form-control"
+              id="ObjID"
+              rows="5"
+              ></textarea>
+            </div>
+         </div>
+            <!-- Work Experience -->
+            <div class="we col-md-6 mt-4 " id="workExperienceContainer">
+            <b class="row g-3 mt-5">Work Experience</b>
+            <div class="workExp row g-3 ">
+            <form class=" form-controlWE WEFeild">
+              <!-- Position  -->
+              <div class="col-md-4 position-relative mt-4">
+                <label for="inputPosition" class="form-label">Position</label>
+                <input type="text" class="inputPosition">
+              </div>
+               <!-- Employee  -->
+                <div class="col-md-4 position-relative">
+                  <label for="inputEP" class="form-label">Employer</label>
+                  <input type="text" class="form-control inputEP ">
+                </div>
+              <!-- City  -->
+              <div class="col-md-4 position-relative">
+                <label for="inputCity2" class="form-label">City</label>
+                <input type="text" class="form-control inputCity" >
+              </div>
+              <!-- statr date  -->
+              <div class="col-md-7 position-relative">
+                <label for="inputSD" class="form-label">Start Date</label>
+                <input type="date" class="form-control inputSD2 " placeholder="">
+              </div>
+              <!-- End date  -->
+              <div class="col-md-7">
+                <label for="inputED" class="form-label">End Date</label>
+                <input type="date" class="form-control inputEd2" placeholder="">
+              </div>
+              <!-- Discription  -->
+              <div class="from-group position-relative mt-3">
+                <label for="" class="mt-2"><b>Discription</b></label>
+                <textarea type="text"
+                placeholder=""
+                class="form-control DicID2"
+                rows="2"
+                ></textarea>
+              </div>
+            </form>
+          </div>
+
+          <!-- Add workExp  -->
+
+              <!-- Add button for multiple work Experience  -->
+              <div class="container  mt-3 ">
+                <button class="btn btn-primary btn-sm button "  id="AddWE">Add</button>
+              </div>
+            </div>
+        </div>
+
+        <!-- Skills  -->
+        <div class="col-md-6 mt-5" id="skillsContainer">
+          <h2 class="ms-5">Skills</h2>
+          <!-- Add skills  -->
+          <div class="SkillsSection col-md-6">
+            <form class="row g-3">
+              <!-- Skills  -->
+              <div class="col-md- mt-4">
+                <label for="inputSkills" class="form-label">Skills</label>
+                <input type="text" class="form-control inputSkills">
+              </div>
+            </form>
+          </div>
+                 <!-- Add button for multiple Add Skills  -->
+                <div class="container mt-3">
+                    <button class="btn btn-primary btn-sm button " id="AddSkills">Add</button>
+                </div>
+            </div>
+        <!-- Add Generate Cv button  -->
+        <div class="container text-center mt-3">
+          <button class="btn btn-primary btn-lg" id="generateCVButton">Generate CV</button>
+        </div>
+    </div>
+
+
+
+    <!-- cv-template  -->
+    <div class="container mt-5" id="cv-template">
+
+      
+      <div class="row">
+        <!-- first col  -->
+        <div class="col-md-4 py-5 background">
+
+          <!-- image section  -->
+          <div class="img">
+          <img src="/default-avatar.png" 
+          alt="" 
+          class="img-fluid myimg ms-3"
+          id="imgTemplate">
+          </div>
+
+          <div class="container mt-4">
+            <p id="nameT1">Rohit Patel</p>
+            <p id="ContactT1">+916261097374, +918989958389</p>
+            <p id="EmailT">rohitppttel@gmail.com</p>
+            <p id="AddressT">Kormangala, Begaluru, Karnataka</p>
+
+            <hr/>
+
+            <!-- Date of Brith section  -->
+            <div class="DOB">      
+            <h5 style="color: rgb(104, 94, 94); font-size: medium;">Date of birth</h5>    
+            <p id="DOBT">28/05/1999</p>
+            </div> 
+            <hr/>
+
+            <!-- Gender section  -->
+            <div class="Gender">      
+              <h5 style="color: rgb(104, 94, 94); font-size: medium;">Gender</h5>    
+              <p id="genderT">Male</p>
+              </div> 
+              <hr/>
+    
+            <!-- Nationality section  -->
+            <div class="Nationality">
+            <h4 style="color: rgb(104, 94, 94); font-size: medium";>Nationality</h4>    
+            <p id="NationalityT">Indian</p>
+            </div>
+            <hr />
+
+            <!--important Links section  -->
+
+            <!-- Linkdin section  -->
+            <div class="links">
+            <div class="linkdin">
+              <h4 style="color: rgb(104, 94, 94); font-size: medium";>LinkedIn</h4>
+              <p id="LinkT"><a href="#1">https;//www.instagram.com/learncodewithdurgesh</a></p>
+            </div>
+            
+            <!-- facbook section  -->
+            <div class="FB">
+              <h4 style="color: rgb(104, 94, 94); font-size: medium";>Facebook</h4> 
+              <p id="fbT"><a href="#1">https;//www.facebook.com/learncodewithdurgesh</a></p>
+            </div>
+
+            <!-- Github section  -->
+            <div class="git">
+               <h4 style="color: rgb(104, 94, 94); font-size: medium";>Github</h4> 
+               <p id="GitT"><a href="#1">https;//www.LinkedIn.com/learncodewithdurgesh</a></p>
+            </div>
+          </div>
+        </div>
+
+        </div>
+
+        <!-- second col  -->
+        <div class="col-md-8 py- secondC ">
+
+          <h1 id="nameT2" class="text-center bg-success p-2 text-dark bg-opacity-10 " style="font-weight: 980;">Rohit Patel</h1>
+
+
+        <!-- objective card  -->
+
+        <div class="card mt-4">
+          <div class="card-header background">
+            <h3>Objective</h3>
+          </div>
+          <div class="card-body">
+            <p id="objectiveT">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos et libero tempora animi id voluptatem ullam, itaque aspernatur voluptatum nostrum impedit omnis ipsam unde natus saepe vero corporis fugiat atque nemo enim quidem quia consequuntur, facilis dolores. Error nostrum perspiciatis quam hic dicta asperiores neque delectus ullam. Voluptates, aperiam molestiae.</p>
+          </div>
+        </div>
+
+        
+        <div class="card mt-4" id="workExperienceT">
+          <div class="card-header background">
+            <h3>Work Experience</h3>
+          </div>
+          <div class="card-body">
+            <ul id="weT">
+            </ul>
+          </div>
+        </div>
+
+        <!-- Education section -->
+
+        <div class="card mt-4">
+          <div class="card-header background">
+            <h3>Education</h3>
+          </div>
+          <div class="card-body">
+            <ul id="AQT">
+              <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum, iure.</li>
+              <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum, iure.</li>
+              <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum, iure.</li>
+            </ul>
+          </div>
+        </div>
+ 
+  <!-- Skills section  -->
+
+  <div class="card mt-4">
+    <div class="card-header background">
+      <h3>Skills</h3>
+    </div>
+    <div class="card-body">
+      <ul id="SkillT"></ul>>
+    </div>
+  </div>
+
+  <!-- Print Button  -->
+      <div class="container mt-3 text-center">
+        <buttom class="btn background" id="printCVButton" onclick="PrintCV()">Print CV</buttom>
+      </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
